@@ -64,7 +64,7 @@ public class Project1Main {
         // 5 different examples of running the game of life
         // uncomment one and let it run
         
-        loadRandomly(new Project1(15,15));
+        //loadRandomly(new Project1(15,15));
         // loadFromStringExample(new Project1());
         // loadFromStringExample2(new Project1());
         // loadFromFileExample(new Project1(), "../data/tub.txt");
@@ -73,6 +73,14 @@ public class Project1Main {
         // bring up the last execution of this program, then add to the
         // line "../data/blinker.txt" and press return
         // if (args.length == 1) loadFromFileExample(new Project1(), args[0]);
+        Project1 test = new Project1();
+        String input =
+            "3 3\n" +
+            "O..\n" +
+            "...\n" +
+            "O.O\n";
+        test.loadFromString(input);
+        System.out.println(test.countLiveNeighbors(1, 1));
     }
 
     private static void loadFromFileExample(GameOfLife game, String file)
